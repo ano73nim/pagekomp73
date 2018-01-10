@@ -1,17 +1,204 @@
-﻿<html lang="ru" class="lang-ru site-ru">
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>КомпМастер - сервисный центр</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="robots" content="INDEX, FOLLOW">
-
-    <meta property="og:image" content="">
-    <meta property="og:title" content="Шаблон ремонт">
-    <meta property="og:description" content="">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <style>
+        .table img {
+            max-width: 100%
+        }
+    </style>
 </head>
 
 <body>
-Технические работы на сервер
+
+
+
+
+    <div id="header">
+        <ul class="nav nav-tabs" style="font-family: Cambria">
+            <li><a href="#main">Главная</a></li>
+            <li><a href="#whatdo">Услуги</a></li>
+            <li><a href="#maps">Координаты</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+    <div id="content">
+        <div id="main">
+            <br/>
+            <br/>
+            <img src="../image/main.jpg" alt="КомпМастер - сервисный центр" width="100%"/>
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <div id="whatdo">
+            <h1 class="text-center">
+                <p style="font-family: 'Cambria'">Мы предлагаем КАЧЕСТВЕННЫЙ ремонт:</p>
+            </h1>
+            <br/>
+            <div class="table-responsive">
+            <table class="table text-center">
+                <thead></thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <br/>
+                        <br/>
+                        <img src="../image/img1.png" alt="Компьютер" class="img-rounded">
+                        <br/>
+                        <br/>
+                    </td>
+                    <td>
+                        <br/>
+                        <br/>
+                        <img src="../image/img2.png" alt="Смартфон" class="img-rounded">
+                        <br/>
+                        <br/>
+                    </td>
+                    <td>
+                        <br/>
+                        <br/>
+                        <img src="../image/img3.png" alt="Ноутбук" class="img-rounded">
+                        <br/>
+                        <br/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <br/>
+                        <br/>
+                        <img src="../image/img4.png" alt="Планшет" class="img-rounded">
+                        <br/>
+                        <br/>
+                    </td>
+                    <td>
+                        <br/>
+                        <br/>
+                        <img src="../image/img5.png" alt="ТВ" class="img-rounded">
+                        <br/>
+                        <br/>
+                    </td>
+                    <td>
+                        <br/>
+                        <br/>
+                        <img src="../image/img6.png" alt="Аудио" class="img-rounded">
+                        <br/>
+                        <br/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <br/>
+                        <br/>
+                        <img src="../image/img7.png" alt="Принтер" class="img-rounded">
+                        <br/>
+                        <br/>
+                    </td>
+                    <td>
+                        <br/>
+                        <br/>
+                        <img src="../image/img8.png" alt="ЭлементыПК" class="img-rounded">
+                        <br/>
+                        <br/>
+                    </td>
+                    <td>
+                        <br/>
+                        <br/>
+                        <img src="../image/img9.png" alt="НастройкаПО" class="img-rounded">
+                        <br/>
+                        <br/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <div id="maps">
+            <h1 class="text-center">
+                <p style="font-family: 'Cambria'">Наше МЕСТОНАХОЖДЕНИЕ:</p>
+            </h1>
+            <br/>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A06efc663c0eea4111ac3cdf408980d9ee7523a3608f09b6dd611a37c7d02ca60&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="footer">
+        <table class="table text-center">
+            <thead></thead>
+            <tbody>
+            <tr>
+                <td>
+                        <p style="font-family: 'Cambria'">
+                            Сервисный центр "КомпМастер"
+                        </p>
+                </td>
+                <td>
+                        <p style="font-family: 'Cambria'">
+                            ИНН:73000000
+                        </p>
+                </td>
+                <td>
+                        <p style="font-family: 'Cambria'">
+                            ОГРН:316732500067642
+                        </p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#header").on("click","a", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+
+        //забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+        top = $(id).offset().top;
+
+        //анимируем переход на расстояние - top за 1000 мс
+        $('body,html').animate({scrollTop: top}, 1000);
+        });
+    });
+    </script>
+
+
 </body>
 </html>
