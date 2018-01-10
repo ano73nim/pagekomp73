@@ -2,12 +2,12 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="f01b30f9-690b-48df-8ced-9dcd1736d8df" name="kompmaster73">
-        <fileTransfer port="21">
+      <webServer id="f01b30f9-690b-48df-8ced-9dcd1736d8df" name="kompmaster73" url="http://kompmaster73.ru">
+        <fileTransfer host="kompmaster73.ru" port="4558" rootFolder="/var/www/kompmaster73.ru">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" />
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" />
           </advancedOptions>
-          <option name="port" value="21" />
+          <option name="port" value="4558" />
         </fileTransfer>
       </webServer>
     </option>
